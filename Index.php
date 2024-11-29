@@ -1,66 +1,56 @@
 <?php
 
-// Set the path
-namespace App\Controllers;
+/*
+ *---------------------------------------------------------------
+ * CHECK PHP VERSION
+ *---------------------------------------------------------------
+ */
 
-class Index extends BaseController{
-    public function index(){
-        $data['title'] = "My Products Management Module";
+$minPhpVersion = '8.1'; // If you update this, don't forget to update `spark`.
+if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
+    $message = sprintf(
+        'Your PHP version must be %s or higher to run CodeIgniter. Current version: %s',
+        $minPhpVersion,
+        PHP_VERSION
+    );
 
-        return view('include\header', $data)
-            .view('include\navbar')
-            .view('index_view')
-            .view('include\footer');
-    }
+    header('HTTP/1.1 503 Service Unavailable.', true, 503);
+    echo $message;
 
-    public function about(){
-        $data['title'] = "About Me";
-
-        return view('include\header', $data)
-            .view('include\navbar')
-            .view('about_view')
-            .view('include\footer');
-    }
-
-    public function showData($name="Cute", $age=19){
-        echo "Hello, $name.<br>";
-        echo "You are $age years old.<br>";
-    }
-
-    public function login(){
-        // Check if submit button is clicked
-        if($this->request->is('POST')){
-            // Load model
-            $usersmodel = model('Users_model');
-            // Retrieve data from form
-            $logindata = $this->request->getPost(['username', 'password']);
-            // Set filter then query from tblusers
-            $user  = $usersmodel->where('username', $logindata['username'])
-                ->where('password', $logindata['password'])
-                ->first();
-            if(!$user){ // If there is no user found with the credentials
-                // Code when user is not found
-            }else{
-                // Redirects to home page if log in was successful
-                return redirect()->to('home');
-            }
-        }
-
-
-        $data['title'] = "Log In";
-
-        return view('include\header', $data)
-            .view('include\navbar')
-            .view('login_view')
-            .view('include\footer');
-    }
-
-    public function dd($data){
-        echo "<pre>";
-        echo print_r($data);
-        echo "</pre>";
-        die();
-    }
+    exit(1);
 }
 
-?>
+/*
+ *---------------------------------------------------------------
+ * SET THE CURRENT DIRECTORY
+ *---------------------------------------------------------------
+ */
+
+// Path to the front controller (this file)
+define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR);
+
+// Ensure the current directory is pointing to the front controller's directory
+if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
+    chdir(FCPATH);
+}
+
+/*
+ *---------------------------------------------------------------
+ * BOOTSTRAP THE APPLICATION
+ *---------------------------------------------------------------
+ * This process sets up the path constants, loads and registers
+ * our autoloader, along with Composer's, loads our constants
+ * and fires up an environment-specific bootstrapping.
+ */
+
+// LOAD OUR PATHS CONFIG FILE
+// This is the line that might need to be changed, depending on your folder structure.
+require FCPATH . '/app/Config/Paths.php';
+// ^^^ Change this line if you move your application folder
+
+$paths = new Config\Paths();
+
+// LOAD THE FRAMEWORK BOOTSTRAP FILE
+require $paths->systemDirectory . '/Boot.php';
+
+exit(CodeIgniter\Boot::bootWeb($paths));

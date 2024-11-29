@@ -1,0 +1,272 @@
+CRITICAL - 2024-10-18 22:55:54 --> ErrorException: Undefined variable $users
+[Method: GET, Route: products]
+in APPPATH\Views\products_view.php on line 21.
+ 1 APPPATH\Views\products_view.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $users', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\products_view.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\products_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('products_view', [], true)
+ 5 APPPATH\Controllers\Products.php(17): view('products_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:29:15 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\user_view.php on line 6.
+ 1 APPPATH\Views\user_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user_view', [], true)
+ 5 APPPATH\Controllers\Products.php(68): view('user_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:29:18 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\user_view.php on line 6.
+ 1 APPPATH\Views\user_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user_view', [], true)
+ 5 APPPATH\Controllers\Products.php(68): view('user_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-18 23:36:03 --> mysqli_sql_exception: Column 'dateencoded' cannot be null in C:\xampp\htdocs\TS2Francisco\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\TS2Francisco\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\TS2Francisco\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\TS2Francisco\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\TS2Francisco\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\TS2Francisco\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\TS2Francisco\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\TS2Francisco\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\TS2Francisco\app\Controllers\Products.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\TS2Francisco\system\CodeIgniter.php(933): App\Controllers\Products->add()
+#9 C:\xampp\htdocs\TS2Francisco\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+#10 C:\xampp\htdocs\TS2Francisco\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\TS2Francisco\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\TS2Francisco\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\TS2Francisco\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-10-18 23:36:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'dateencoded' cannot be null
+[Method: POST, Route: products/add]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producttbl` (`barcode`, `productname`, `description`, `unit`, `purchaseprice`, `sellingprice`, `wholesaleprice`, `deliverydate`, `supplier`, `dateencoded`) VALUES (:barcode:, :productname:, :description:, :unit:, :purchaseprice:, :sellingprice:, :wholesaleprice:, :deliverydate:, :supplier:, :dateencoded:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Products.php(41): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->add()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:36:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'dateencoded' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producttbl` (`barcode`, `productname`, `description`, `unit`, `purchaseprice`, `sellingprice`, `wholesaleprice`, `deliverydate`, `supplier`, `dateencoded`) VALUES (\'123123\', \'asdasd\', \'asdasd\', \'asdasd\', \'222\', \'111\', \'221\', \'\', \'asdasd\', NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producttbl` (`barcode`, `productname`, `description`, `unit`, `purchaseprice`, `sellingprice`, `wholesaleprice`, `deliverydate`, `supplier`, `dateencoded`) VALUES (\'123123\', \'asdasd\', \'asdasd\', \'asdasd\', \'222\', \'111\', \'221\', \'\', \'asdasd\', NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producttbl` (`barcode`, `productname`, `description`, `unit`, `purchaseprice`, `sellingprice`, `wholesaleprice`, `deliverydate`, `supplier`, `dateencoded`) VALUES (:barcode:, :productname:, :description:, :unit:, :purchaseprice:, :sellingprice:, :wholesaleprice:, :deliverydate:, :supplier:, :dateencoded:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Products.php(41): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->add()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:36:03 --> [Caused by] mysqli_sql_exception: Column 'dateencoded' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `producttbl` (`barcode`, `productname`, `description`, `unit`, `purchaseprice`, `sellingprice`, `wholesaleprice`, `deliverydate`, `supplier`, `dateencoded`) VALUES (\'123123\', \'asdasd\', \'asdasd\', \'asdasd\', \'222\', \'111\', \'221\', \'\', \'asdasd\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `producttbl` (`barcode`, `productname`, `description`, `unit`, `purchaseprice`, `sellingprice`, `wholesaleprice`, `deliverydate`, `supplier`, `dateencoded`) VALUES (\'123123\', \'asdasd\', \'asdasd\', \'asdasd\', \'222\', \'111\', \'221\', \'\', \'asdasd\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `producttbl` (`barcode`, `productname`, `description`, `unit`, `purchaseprice`, `sellingprice`, `wholesaleprice`, `deliverydate`, `supplier`, `dateencoded`) VALUES (\'123123\', \'asdasd\', \'asdasd\', \'asdasd\', \'222\', \'111\', \'221\', \'\', \'asdasd\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `producttbl` (`barcode`, `productname`, `description`, `unit`, `purchaseprice`, `sellingprice`, `wholesaleprice`, `deliverydate`, `supplier`, `dateencoded`) VALUES (:barcode:, :productname:, :description:, :unit:, :purchaseprice:, :sellingprice:, :wholesaleprice:, :deliverydate:, :supplier:, :dateencoded:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Products.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->add()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:39:26 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: products/edit/123456]
+in APPPATH\Views\edit_view.php on line 6.
+ 1 APPPATH\Views\edit_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\edit_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\edit_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_view', [], true)
+ 5 APPPATH\Controllers\Products.php(101): view('edit_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->edit('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:39:37 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: products/edit/123456]
+in APPPATH\Views\edit_view.php on line 6.
+ 1 APPPATH\Views\edit_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\edit_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\edit_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_view', [], true)
+ 5 APPPATH\Controllers\Products.php(101): view('edit_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->edit('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:39:41 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\user_view.php on line 6.
+ 1 APPPATH\Views\user_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user_view', [], true)
+ 5 APPPATH\Controllers\Products.php(67): view('user_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:40:35 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\user_view.php on line 6.
+ 1 APPPATH\Views\user_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user_view', [], true)
+ 5 APPPATH\Controllers\Products.php(67): view('user_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:41:56 --> ErrorException: Undefined variable $user
+[Method: GET, Route: products/edit/123456]
+in APPPATH\Views\edit_view.php on line 3.
+ 1 APPPATH\Views\edit_view.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\edit_view.php', 3)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\edit_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_view', [], true)
+ 5 APPPATH\Controllers\Products.php(101): view('edit_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->edit('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:42:24 --> ErrorException: Undefined variable $user
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\user_view.php on line 6.
+ 1 APPPATH\Views\user_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user_view', [], true)
+ 5 APPPATH\Controllers\Products.php(67): view('user_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:43:34 --> ErrorException: Undefined variable $user
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\user_view.php on line 6.
+ 1 APPPATH\Views\user_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\user_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user_view', [], true)
+ 5 APPPATH\Controllers\Products.php(67): view('user_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:49:44 --> ErrorException: Undefined variable $user
+[Method: GET, Route: products/edit/123456]
+in APPPATH\Views\edit_view.php on line 3.
+ 1 APPPATH\Views\edit_view.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\edit_view.php', 3)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\edit_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('edit_view', [], true)
+ 5 APPPATH\Controllers\Products.php(101): view('edit_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->edit('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:51:22 --> ErrorException: Undefined variable $product
+[Method: GET, Route: products/edit/123456]
+in APPPATH\Views\editproducts_view.php on line 3.
+ 1 APPPATH\Views\editproducts_view.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\editproducts_view.php', 3)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\editproducts_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('editproducts_view', [], true)
+ 5 APPPATH\Controllers\Products.php(101): view('editproducts_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->edit('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:55:33 --> ErrorException: Undefined variable $user
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\product_view.php on line 6.
+ 1 APPPATH\Views\product_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\product_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\product_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('product_view', [], true)
+ 5 APPPATH\Controllers\Products.php(67): view('product_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:57:30 --> ErrorException: Undefined variable $user
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\product_view.php on line 6.
+ 1 APPPATH\Views\product_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\product_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\product_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('product_view', [], true)
+ 5 APPPATH\Controllers\Products.php(67): view('product_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 23:57:59 --> ErrorException: Undefined variable $product
+[Method: GET, Route: products/view/123456]
+in APPPATH\Views\product_view.php on line 6.
+ 1 APPPATH\Views\product_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product', 'C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\product_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\TS2Francisco\\app\\Views\\product_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('product_view', [], true)
+ 5 APPPATH\Controllers\Products.php(67): view('product_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Products->view('123456')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
